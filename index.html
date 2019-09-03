@@ -133,7 +133,7 @@
 
     <div>
         <h2>Contact Me</h2>
-        <form method="get" action="">
+        <form method="get" action="" id="myform" onsubmit="return false">
             <label for="fname">Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your Name" minlength="4" required>
     
@@ -147,9 +147,20 @@
             <textarea id="my-textarea" name="" rows="5" cols="100" placeholder="Enter your message here..."
                 minlength="20"></textarea>
     
-            <input type="submit" value="Submit">
+            
+    
+            <input type="button" value="Submit"  onclick="submitted()">
+            
         </form>
     </div>
+
+    <script type="text/javascript">
+        function submitted() {
+            
+            alert('This form was submitted successfully');
+
+        }
+    </script>
 
 </body>
 </html>
